@@ -14,7 +14,7 @@ const Navbar = () => {
    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md font-family-main border-b border-gray-200 shadow-md">
     <div className="container  w-full mx-auto  px-4 py-4 md:mx-auto ">
 <div className="flex w-full justify-between items-center">
-  <div className="logo flex items-center justify-around"><a href="/" className="text-2xl font-family-main mr-12"><span className="text-black">BLOOM</span><span className="text-main">SHOP</span></a>
+  <div className="logo flex items-center justify-around"><a href="/sneakers-shop" className="text-2xl font-family-main mr-12"><span className="text-black">BLOOM</span><span className="text-main">SHOP</span></a>
    <Link to="/Contact" className="hidden md:block text-sm px-4 py-2 rounded-full transition-all duration-300 hover:bg-gray-100 ">Contact</Link>
    </div>
    <div className="hidden lg:flex flex-1 max-w-md ">
@@ -29,8 +29,8 @@ const Navbar = () => {
   <button onClick={()=>setIsopen(!isopen)} className="lg:hidden md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors">{isopen? <X/>:<Menu/>}</button>
    <Link to="/Cart" className="relative rounded-full p-2 mr-2 hover:bg-gray-100 transition-all duration-300"><ShoppingCart/></Link>
  <div className="hidden sm:flex items-center space-x-2 font-medium">
-  <a href=""><button className="rounded-full text-sm py-2 px-3 hover:bg-accent transition-colors hover:text-accentfor">Sign In</button></a>
-  <a href=""><button className="rounded-full text-sm shadow bg-main py-[7px] px-3 hover:bg-main/80 transition-colors">Sign Up</button></a>
+  <a href="/sneakers-shop"><button className="rounded-full text-sm py-2 px-3 hover:bg-accent transition-colors hover:text-accentfor">Sign In</button></a>
+  <a href="/sneakers-shop"><button className="rounded-full text-sm shadow bg-main py-[7px] px-3 hover:bg-main/80 transition-colors">Sign Up</button></a>
  </div>
  </div>
 
