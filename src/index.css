@@ -3,6 +3,14 @@
     --color-main:lab(72.7923% 26.9413 75.4637);
     --color-black:lab(15.1576% 0 0);
     --color-accent:lab(99 -0.6 8.19);
+    --color-graccent:lab(98.6102% -.622213 8.19078);
     --color-accentfor:lab(38.018% 33.4899 44.1576);
+    --color-foreground:lab(15.1576% 0 0);
+    --color-primary:lab(0% 0 0);
+    --color-muted:lab(47.8044% -.388056 -8.71085);
+    --color-bgmuted:lab(98.2133% -.210196 -.600767);
+    --color-border:lab(91.5774% -.154167 -2.19255);
+    --color-foregroundcard:lab(15.1576% 0 0);
+    --color-secondary:lab(96.16% -.0796914 -1.09795);
     --font-family-main: "Inter", sans-serif;
 }

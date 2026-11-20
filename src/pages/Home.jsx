@@ -1,10 +1,18 @@
 
+import Productslist from "../components/Productslist"
 
 const Home = () => {
   return (
-    <div className="h-[200vh]">
-      this is home
-    </div>
+    <main className="grow font-family-main">
+  <div className="bg-white px-4 py-8 sm:py-12 lg:py-16 lg:px-8 min-h-screen">
+
+<div className="mx-auto text-center mb-18 space-y-3 ">
+  <h1 className="text-main leading-tighter text-4xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tight">Step Into Style</h1>
+  <p className="text-foreground text-base max-w-3xl mx-auto text-balance sm:text-lg">Discover our latest collection of premium sneakers — comfort, design, and performance in every pair.</p>
+</div>
+<Productslist/>
+  </div>
+    </main>
   )
 }
 
