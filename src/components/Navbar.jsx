@@ -6,7 +6,7 @@ import { ShoppingCart } from 'lucide-react';
 import { Usecart } from "../../context/Cartcontext";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({search,setSearch}) => {
   //state for toggle menu
   const[isopen,setIsopen]=useState(false);
   //state for toggle search
@@ -14,6 +14,8 @@ const Navbar = () => {
 const closemenu=()=>{setIsopen(false)};
 const{state,dispatch}=Usecart();
 const cartcount=state.reduce((total,item)=>total+item.quantity,0);
+
+
   return (
    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl font-family-main border-b border-gray-200 shadow-md">
     <div className="container  w-full mx-auto  px-4 py-4 md:mx-auto lg:px-6">
@@ -24,7 +26,7 @@ const cartcount=state.reduce((total,item)=>total+item.quantity,0);
    <div className="hidden lg:flex flex-1 max-w-md ">
      <form className=" relative w-full">
           <Search className="absolute w-[15px] opacity-40 top-[50%] -translate-y-[50%] left-2"/>
-<input type="text" placeholder="Search products..." className=" w-full px-3 pl-10 text-[14px] py-2 border-1 border-gray-300 rounded-[20px] disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-main focus-visible:outline-none" />
+<input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} placeholder="Search products..." className=" w-full px-3 pl-10 text-[14px] py-2 border-1 border-gray-300 rounded-[20px] disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-main focus-visible:outline-none" />
         </form>
    </div>
  
@@ -48,7 +50,7 @@ const cartcount=state.reduce((total,item)=>total+item.quantity,0);
       <div className="pt-3 lg:hidden">
         <form className="relative">
           <Search className="lg:hidden absolute w-[17px] opacity-40 top-[50%] -translate-y-[50%] left-2"/>
-<input  type="text" placeholder="Search products..." className=" w-full px-3 pl-10 text-[14px] py-3 border-1 border-gray-400 rounded-[20px] disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-main focus-visible:outline-none" autoFocus />
+<input  type="text"  value={search} onChange={(e)=>setSearch(e.target.value)} placeholder="Search products..." className=" w-full px-3 pl-10 text-[14px] py-3 border-1 border-gray-400 rounded-[20px] disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-main focus-visible:outline-none" autoFocus />
         </form>
       </div>
     )}

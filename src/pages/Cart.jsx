@@ -57,7 +57,7 @@ if(state.length===0){
 </button>
             </div>
             {state.map((item)=>(
-              <div className="flex justify-center items-center gap-4 px-4 py-4 border-b border-border">
+              <div key={item.id} className="flex justify-center items-center gap-4 px-4 py-4 border-b border-border">
                 <div className="relative w-25 h-25 ">
 <img className="absolute object-cover rounded-3xl w-full h-full" src={item.image}/>
                 </div>

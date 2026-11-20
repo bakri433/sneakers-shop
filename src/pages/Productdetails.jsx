@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/preserve-manual-memoization */
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams,useNavigate } from "react-router-dom";
 import { useContext, useMemo, useState } from "react";
 import products from "../../data/products.json";
 import { ArrowLeft,Star,Minus,Plus,ShoppingCart,Heart,Share2,Truck,Shield,RotateCcw,Loader2,Check} from "lucide-react";
@@ -66,8 +66,11 @@ await delay(1000);
  setbutton("Add to Cart");
  setadded(false);
 }
-const buynow=(e)=>{
-  addproducttocart();
+const navigate=useNavigate();
+const  buynow=async()=>{
+  await addproducttocart();
+  navigate("/Cart");
+
   
 }
     return (
